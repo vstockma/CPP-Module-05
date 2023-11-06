@@ -6,7 +6,7 @@
 /*   By: vstockma <vstockma@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/03 11:06:00 by vstockma          #+#    #+#             */
-/*   Updated: 2023/11/03 14:34:31 by vstockma         ###   ########.fr       */
+/*   Updated: 2023/11/06 11:58:51 by vstockma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,16 +16,16 @@
 #include "AForm.hpp"
 #include <fstream>
 
-class Shrubbery : public AForm
+class ShrubberyCreationForm : public AForm
 {
     private:
         std::string _target;
     public:
-        Shrubbery();
-        Shrubbery(std::string target);
-        Shrubbery(const Shrubbery& copy);
-        Shrubbery& operator=(const Shrubbery& copy);
-        ~Shrubbery();
+        ShrubberyCreationForm();
+        ShrubberyCreationForm(std::string target);
+        ShrubberyCreationForm(const ShrubberyCreationForm& copy);
+        ShrubberyCreationForm& operator=(const ShrubberyCreationForm& copy);
+        ~ShrubberyCreationForm();
 
         std::string getTarget() const;
 

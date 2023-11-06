@@ -6,28 +6,28 @@
 /*   By: vstockma <vstockma@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/03 11:06:03 by vstockma          #+#    #+#             */
-/*   Updated: 2023/11/03 12:16:10 by vstockma         ###   ########.fr       */
+/*   Updated: 2023/11/06 12:28:11 by vstockma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ROBOT_HPP
-#define ROBOT_HPP
+#ifndef RobotomyRequestForm_HPP
+#define RobotomyRequestForm_HPP
 
 #include "AForm.hpp"
 #include <cstdlib>
 #include <ctime>
 #include <unistd.h>
 
-class Robot : public AForm
+class RobotomyRequestForm : public AForm
 {
     private:
         std::string _target;
     public:
-        Robot();
-        Robot(std::string target);
-        Robot(const Robot& copy);
-        Robot& operator=(const Robot& copy);
-        ~Robot();
+        RobotomyRequestForm();
+        RobotomyRequestForm(std::string target);
+        RobotomyRequestForm(const RobotomyRequestForm& copy);
+        RobotomyRequestForm& operator=(const RobotomyRequestForm& copy);
+        ~RobotomyRequestForm();
 
         std::string getTarget() const;
 

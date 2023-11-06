@@ -6,7 +6,7 @@
 /*   By: vstockma <vstockma@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/03 11:06:06 by vstockma          #+#    #+#             */
-/*   Updated: 2023/11/03 11:25:03 by vstockma         ###   ########.fr       */
+/*   Updated: 2023/11/06 12:29:20 by vstockma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,16 +15,16 @@
 
 #include "AForm.hpp"
 
-class President : public AForm
+class PresidentialPardonForm : public AForm
 {
     private:
         std::string _target;
     public:
-        President();
-        President(std::string target);
-        President(const President& copy);
-        President& operator=(const President& copy);
-        ~President();
+        PresidentialPardonForm();
+        PresidentialPardonForm(std::string target);
+        PresidentialPardonForm(const PresidentialPardonForm& copy);
+        PresidentialPardonForm& operator=(const PresidentialPardonForm& copy);
+        ~PresidentialPardonForm();
 
         std::string getTarget() const;
 

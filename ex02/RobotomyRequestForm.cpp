@@ -6,54 +6,54 @@
 /*   By: vstockma <vstockma@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/02 16:20:14 by vstockma          #+#    #+#             */
-/*   Updated: 2023/11/03 16:02:50 by vstockma         ###   ########.fr       */
+/*   Updated: 2023/11/06 14:46:53 by vstockma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "RobotomyRequestForm.hpp"
 
-Robot::Robot() : AForm("Robot", 72, 45)
+RobotomyRequestForm::RobotomyRequestForm() : AForm("RobotomyRequestForm", 72, 45)
 {
     _target = "Default";
-    std::cout << "Robot Default constructor called" << std::endl;
+    std::cout << "RobotomyRequestForm Default constructor called" << std::endl;
 }
 
-Robot::Robot(std::string target) : AForm("Robot", 72, 45)
+RobotomyRequestForm::RobotomyRequestForm(std::string target) : AForm("RobotomyRequestForm", 72, 45)
 {
     if (target.empty())
         _target = "Unkown";
     else
         _target = target;
-    std::cout << "Robot constructor called" << std::endl;
+    std::cout << "RobotomyRequestForm constructor called" << std::endl;
 }
 
-Robot::Robot(const Robot& copy)
+RobotomyRequestForm::RobotomyRequestForm(const RobotomyRequestForm& copy)
 {
     *this = copy;
-    std::cout << "Robot Copy constructor called" << std::endl;
+    std::cout << "RobotomyRequestForm Copy constructor called" << std::endl;
 }
 
-Robot& Robot::operator=(const Robot& copy)
+RobotomyRequestForm& RobotomyRequestForm::operator=(const RobotomyRequestForm& copy)
 {
     _target = copy._target;
-    std::cout << "Robot Copy assignment operator called" << std::endl;
+    std::cout << "RobotomyRequestForm Copy assignment operator called" << std::endl;
     return (*this);
 }
 
-Robot::~Robot()
+RobotomyRequestForm::~RobotomyRequestForm()
 {
-    std::cout << "Robot Destructor called" << std::endl;
+    std::cout << "RobotomyRequestForm Destructor called" << std::endl;
 }
 
-std::string Robot::getTarget() const
+std::string RobotomyRequestForm::getTarget() const
 { return _target; }
 
-void    Robot::execute(Bureaucrat const & executor) const
+void    RobotomyRequestForm::execute(Bureaucrat const & executor) const
 {
     if (executor.getGrade() > getGradeExecute() || !getIsSigned())
         throw GradeTooLowException();
     int i = 0;
-    while (i < 10)
+    while (i < 7)
     {
         std::cout << "drilling\n";
         usleep(1000000);

@@ -6,7 +6,7 @@
 /*   By: vstockma <vstockma@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 14:51:40 by vstockma          #+#    #+#             */
-/*   Updated: 2023/11/02 15:38:25 by vstockma         ###   ########.fr       */
+/*   Updated: 2023/11/06 11:36:53 by vstockma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,8 @@ Form::Form(const Form& copy) : _name(copy._name), _grade_sign_it(copy._grade_sig
 
 Form& Form::operator=(const Form& copy)
 {
-    _is_signed = copy._is_signed;
+    (void)copy;
+    _is_signed = false;
     std::cout << "Form Copy assignment operator called" << std::endl;
     return (*this);
 }
@@ -76,7 +77,9 @@ void    Form::beSigned(Bureaucrat& bureaucrat)
 
 std::ostream& operator<<(std::ostream& os, Form& copy)
 {
-    os << "Name: " << copy.getName() << " | Signed Status: " << copy.getIsSigned() << " | Grade to sign in: " << copy.getGradeSignIt() << " | Grade to execute: " << copy.getGradeExecute(); 
+    os << "Name: " << copy.getName() << " | Signed Status: " << copy.getIsSigned();
+    os << " | Grade to sign in: " << copy.getGradeSignIt() << " | Grade to execute: ";
+    os << copy.getGradeExecute(); 
     return (os);
 }
 

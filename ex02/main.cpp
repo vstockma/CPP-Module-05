@@ -6,7 +6,7 @@
 /*   By: vstockma <vstockma@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/30 12:44:39 by vstockma          #+#    #+#             */
-/*   Updated: 2023/11/03 16:01:19 by vstockma         ###   ########.fr       */
+/*   Updated: 2023/11/06 14:53:34 by vstockma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,17 +19,17 @@ int main()
 {
     try
     {
-        Bureaucrat bur("Hans", 2);
+        Bureaucrat bur("Hans", 3);
 
-        Shrubbery   form("ascii_tree");
+        ShrubberyCreationForm   form("tree");
         bur.signAForm(form);
         bur.executeForm(form);
 
-        Robot robot("Robot");
+        RobotomyRequestForm robot("Robot");
         bur.signAForm(robot);
         bur.executeForm(robot);
 
-        President pardon("Pardon");
+        PresidentialPardonForm pardon("Pardon");
         bur.signAForm(pardon);
         bur.executeForm(pardon);
     }

@@ -6,7 +6,7 @@
 /*   By: vstockma <vstockma@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/03 16:05:56 by vstockma          #+#    #+#             */
-/*   Updated: 2023/11/03 16:46:48 by vstockma         ###   ########.fr       */
+/*   Updated: 2023/11/06 15:21:23 by vstockma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ Intern::~Intern()
 AForm*    Intern::makeForm(std::string form_name, std::string form_target) const
 {
     const std::string forms[3] = {"presidential pardon", "robotomy request", "shrubbery creation"};
-
+    
     int i = 0;
     while (i < 3)
     {
@@ -48,12 +48,13 @@ AForm*    Intern::makeForm(std::string form_name, std::string form_target) const
     }
     switch (i)
     {
-        case 0: return new Shrubbery(form_target);
-        case 1: return new Robot(form_target);
-        case 2: return new President(form_target);
+        case 0: return new ShrubberyCreationForm(form_target);
+        case 1: return new RobotomyRequestForm(form_target);
+        case 2: return new PresidentialPardonForm(form_target);
             break ;
         default:
             std::cout << "This kind of Form does not exist" << std::endl;
     }
+    return (NULL);
 }
 

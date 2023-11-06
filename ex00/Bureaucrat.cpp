@@ -6,7 +6,7 @@
 /*   By: vstockma <vstockma@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/30 12:50:07 by vstockma          #+#    #+#             */
-/*   Updated: 2023/10/31 15:03:17 by vstockma         ###   ########.fr       */
+/*   Updated: 2023/11/06 11:16:22 by vstockma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,7 +69,7 @@ int Bureaucrat::getGrade() const
 void    Bureaucrat::incrementGrade()
 {
     if ((_grade - 1) < 1)
-        throw Bureaucrat::GradeTooLowException();
+        throw Bureaucrat::GradeTooHighException();
     else
         _grade -= 1;
 }
@@ -77,7 +77,7 @@ void    Bureaucrat::incrementGrade()
 void    Bureaucrat::decrementGrade()
 {
     if ((_grade + 1) > 150)
-        throw Bureaucrat::GradeTooHighException();
+        throw Bureaucrat::GradeTooLowException();
     else
         _grade += 1;
 }

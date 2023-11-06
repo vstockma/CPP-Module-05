@@ -6,7 +6,7 @@
 /*   By: vstockma <vstockma@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 14:50:39 by vstockma          #+#    #+#             */
-/*   Updated: 2023/11/03 15:58:06 by vstockma         ###   ########.fr       */
+/*   Updated: 2023/11/06 11:48:49 by vstockma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ class AForm
         AForm(std::string _new_name, int new_grade_sign_it, int new_grade_execute);
         AForm(const AForm& copy);
         AForm& operator=(const AForm& copy);
-        virtual ~AForm();
+        ~AForm();
 
         class GradeTooHighException : public std::exception
         {
